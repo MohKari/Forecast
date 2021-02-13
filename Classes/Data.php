@@ -131,7 +131,7 @@ class Data extends Base
 
 // HANDLE FRONTEND DATA 
 
-if($_SERVER['REQUEST_METHOD'] === 'POST')
+if(isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST')
 {
 	// we have input suggest city 
 	if(!empty($_POST["keyword"])) 
