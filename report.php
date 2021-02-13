@@ -1,13 +1,11 @@
-<?php if(!isset($_SESSION)){session_start();} ?>
-
 <?php 
-
-	$loc = $_GET['loc'];
- 
  	require 'Classes/Data.php';
 
  	use Classes\Data as DataClass;
 
+	$loc = $_GET['loc'];
+ 	
+	// Call datacass object for the forcast
  	$obj =  new DataClass();
 
 	// Call getForcast Method from DataClass and print  response.
