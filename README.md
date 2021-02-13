@@ -5,11 +5,11 @@ current weather information for a city.
 
 The following information is displayed after entering the correct city name:
 
-○ Current weather conditions.
-○ The current temperature, in Celsius.
-○ “Feels like” temperature, in Celsius.
-○ Humidity percentage.
-○ Minimum temperature, in Celsius.
-○ Maximum temperature, in Celsius.
-○ Wind speed, in miles per hour.
-○ Rain volume for the last hour, in millimeters.
+○ Current weather conditions. <br>
+○ The current temperature, in Celsius. <br>
+○ “Feels like” temperature, in Celsius. <br>
+○ Humidity percentage. <br>
+○ Minimum temperature, in Celsius. <br>
+○ Maximum temperature, in Celsius. <br>
+○ Wind speed, in miles per hour. <br>
+○ Rain volume for the last hour, in millimeters. <br>
