@@ -15,12 +15,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!--  <script src="assets/js/custom.js" defer></script>
-  -->
+
   </head>
 <body>
 
-<!-- http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&APPID=fc7b7c0956a475de7d47a2a1cd7a9965 -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
     <ul class="navbar-nav">
@@ -45,7 +43,9 @@
            
           </div>
            
-          <div id="suggesstion-box" style="background: background: #f0f0f0"></div>
+          <div id="suggesstion-box" class="d-none" style="background: background: #f0f0f0">
+            <ul class='p-3' id='city' ></ul>
+          </div>
            
 
         </div>
@@ -64,47 +64,7 @@
 
 <!--BTF -->
 
-<script type="text/javascript">
-$(document).ready(function () {
-  
-  //$('.forcast-result-container').load('report.php');
-  
-  $("#search-city").keyup(function(){
-
-    var keyword = $(this).val();
-
-    if(keyword.length > 2)
-      {
-
-          $.ajax({
-              type: "POST",
-              url: "Classes/Data.php",
-              data:'keyword='+$(this).val(),
-              beforeSend: function(){
-                //$("#search-box").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
-              },
-             
-              success: function(data){
-                $("#suggesstion-box").show();
-                $("#suggesstion-box").html(data);
-                $("#search-box").css("background","#FFF");
-              }
-        });
-
-      }  
-        
-  });
-
-  $('#search-city').focusout(function() { 
-   // $('#suggesstion-box').hide();
-  });
-
-  $('#search-city').focus(function() { 
-    $('#suggesstion-box').show();
-  });
-
-});  
-</script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 </html>

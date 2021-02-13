@@ -136,13 +136,27 @@ if(isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST')
 	// we have input suggest city 
 	if(!empty($_POST["keyword"])) 
 	{
-		$m = new Data();
-		$p = $m->getCity($_POST["keyword"]);
+		$obj = new Data();
+
+		$cities = $obj->getCity($_POST["keyword"]);
+		
 		$li = '';
-		foreach ($p as $key => $value) {
-			$li .= "<li class='city-list'>".$value."</li>";
+		
+		if(!empty($cities)) {
+
+			foreach ($cities as $key => $value) {
+		
+				$li .= "<li class='city-list' seq='1'>".$value."</li>";
+		
+			}
+
+		}else{
+			
+			$li .= "<li class='city-list'>No city found.</li>";
+		
 		}
-		echo "<ul class='p-3'>".$li."</ul>";
+		
+		echo $li;
 	}	
 }
 
