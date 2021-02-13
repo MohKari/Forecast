@@ -13,3 +13,7 @@ The following information is displayed after entering the correct city name:
 ○ Maximum temperature, in Celsius. <br>
 ○ Wind speed, in miles per hour. <br>
 ○ Rain volume for the last hour, in millimeters. <br>
+
+
+The application can also be accessed via cli by using following command in cli
+php Script/forcast.php
