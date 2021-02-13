@@ -14,8 +14,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="assets/js/custom.js" defer></script>
-
+ <!--  <script src="assets/js/custom.js" defer></script>
+ -->
 </head>
 <body>
 
@@ -35,6 +35,9 @@
       border-radius: 10px;
     margin-top: -20px;
     }
+    #country-list{float:left;list-style:none;margin-top:-3px;padding:0;width:190px;position: absolute;}
+#country-list li{padding: 10px; background: #f0f0f0; border-bottom: #bbb9b9 1px solid;}
+#country-list li:hover{background:#ece3d2;cursor: pointer;}
 </style>
   
 <div class="container-fluid banner-search-img">
@@ -44,6 +47,7 @@
 		  <input type="search" id="search-city" class="form-control" placeholder="Search" aria-label="Search"
 			aria-describedby="search-addon" />
 		  <button type="button" class="btn btn-dark">search</button>
+      <div id="suggesstion-box"></div>
 		</div>
 		</div>
 	</div>
@@ -58,5 +62,28 @@
 
 
 <!--BTF -->
+    
+  <script type="text/javascript">
+    $(document).ready(function () {
+  
+      $("#search-city").keyup(function(){
+    $.ajax({
+    type: "POST",
+    url: "city.php",
+    data:'keyword='+$(this).val(),
+    beforeSend: function(){
+      //$("#search-box").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+    },
+    success: function(data){
+      $("#suggesstion-box").show();
+      $("#suggesstion-box").html(data);
+      $("#search-box").css("background","#FFF");
+    }
+    });
+  });
+
+});  
+  </script>
+
 </body>
 </html>
