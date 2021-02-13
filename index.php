@@ -71,9 +71,4 @@
 
     </div>
 
-    <div class="container">
-      
-      <div class="forcast-result-container bg-dark">
-      </div>
-    
-    </div>
+   

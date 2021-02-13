@@ -28,8 +28,8 @@ $(document).ready(function () {
         
   });
   
-  $('#search-city').focusout(function() { 
-   // $('#suggesstion-box').hide();
+  $('.search-wrapper').focusout(function() { 
+    setTimeout(function(){$('#suggesstion-box').hide();},1000);   
   });
 
   $('#search-city').focus(function() { 
