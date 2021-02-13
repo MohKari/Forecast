@@ -1,3 +1,4 @@
+<?php if(!isset($_SESSION)){session_start();} ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,6 +16,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="assets/js/custom.js" defer></script>
+
 
   </head>
 <body>
@@ -23,7 +26,7 @@
 
     <ul class="navbar-nav">
       <li class="nav-item active">
-      <a class="nav-link" href="#">Weather Forecast</a>
+      <a class="nav-link" href="index.php">Weather Forecast</a>
       </li>
     </ul>
 
@@ -33,7 +36,7 @@
       
       <div class="search-wrapper">
         
-        <div class="col-md-12">	
+        <div class="col-md-12"> 
           
           <div class="input-group">
             
@@ -46,10 +49,24 @@
           <div id="suggesstion-box" class="d-none" style="background: background: #f0f0f0">
             <ul class='p-3' id='city' ></ul>
           </div>
-           
+
+           <?php
+          
+            if(isset($_SESSION['flash'])){?>
+          
+              <div class="alert alert-danger mt-5" role="alert">
+
+                <?php echo $_SESSION['flash']; unset($_SESSION['flash']); ?>
+              
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+               </div> 
+          
+          <?php } ?>
 
         </div>
-      
+        
+
       </div>
 
     </div>
@@ -60,11 +77,3 @@
       </div>
     
     </div>
-
-
-<!--BTF -->
-
-  <script src="assets/js/custom.js"></script>
-
-</body>
-</html>

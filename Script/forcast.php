@@ -87,7 +87,7 @@ use Classes\Data as DataClass;
 			
 			echo "Feels like temperature, in celsius: {$response['main']['feels_like']} \n";
 			
-			echo "Humidity percentage: {$response['main']['humidity']} \n";
+			echo "Humidity percentage: {$response['main']['humidity']}% \n";
 			
 			echo "Minimum temperature, in celsius: {$response['main']['temp_min']} \n";
 			
@@ -95,7 +95,7 @@ use Classes\Data as DataClass;
 			
 			echo "Wind speed, in miles per hour: {$response['wind']['speed']} \n";
 			
-			if(!empty($response['rain']['1h'])){
+			if(isset($response['rain']['1h'])){
 
 				echo "Rain volume for the last hour, in millimeters: {$response['main']['humidity']} \n";
 			

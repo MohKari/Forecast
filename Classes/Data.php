@@ -146,7 +146,7 @@ if(isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST')
 
 			foreach ($cities as $key => $value) {
 		
-				$li .= "<li class='city-list' seq='1'>".$value."</li>";
+				$li .= "<a href='report.php?loc={$value}'><li class='city-list'>".$value."</li></a>";
 		
 			}
 

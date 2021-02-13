@@ -60,7 +60,7 @@ class Base
 			if(!$this->apiKey)
 			{
 
-				exit("API KEY IS REQUIRED IN LIVE ENVIREONMENT. Please set key in .env file");
+				exit("API KEY IS REQUIRED IN LIVE ENVIREONMENT.");
 
 			}
 		

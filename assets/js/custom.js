@@ -27,12 +27,6 @@ $(document).ready(function () {
       }  
         
   });
-
-  $("#city").click(function() {
-
-      var location =  $(this).text(); // gets text contents of clicked li
-    
-  });
   
   $('#search-city').focusout(function() { 
    // $('#suggesstion-box').hide();
@@ -42,4 +36,5 @@ $(document).ready(function () {
     $('#suggesstion-box').show();
   });
 
+  $(".alert-danger").show().delay(1700).fadeOut();
 });  
