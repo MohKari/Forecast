@@ -140,9 +140,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
 		$p = $m->getCity($_POST["keyword"]);
 		$li = '';
 		foreach ($p as $key => $value) {
-			$li .= "<li >".$value."</li>";
+			$li .= "<li class='city-list'>".$value."</li>";
 		}
-		echo "<ul>".$li."</ul>";
+		echo "<ul class='p-3'>".$li."</ul>";
 	}	
 }
 
