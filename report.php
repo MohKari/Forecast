@@ -1,4 +1,7 @@
 <?php 
+
+	if(!isset($_SESSION)){ session_start(); } 
+
  	require 'Classes/Data.php';
 
  	use Classes\Data as DataClass;

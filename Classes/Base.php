@@ -27,12 +27,6 @@ class Base
 	private function setEnv()
 	{
 
-		if(!isset($_SESSION)){
-
-			session_start();
-
-		}
-
 		// include .env file to set the env
 		$env_file =  dirname(__FILE__, 2). '/.env';
 		
