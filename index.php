@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
 
-    <title>Bootstrap Example</title>
+    <title>Weather Forcast</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- ATF -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -30,17 +31,6 @@
 
   </nav>  
 
-  <style type="text/css">
-  .forcast-result-container{
-  border-radius: 10px;
-  margin-top: -20px;
-  }
-  #suggesstion-box{background: #f0f0f0;list-style:none;margin-top:1px;padding:0;width:90%;position: absolute;}
-  #suggesstion-box li{padding: 10px;  border-bottom: #bbb9b9 1px solid;}
-  #city-list li:hover{background:#ece3d2;cursor: pointer;}
-
-  </style>
-
     <div class="container-fluid banner-search-img">
       
       <div class="search-wrapper">
@@ -51,7 +41,7 @@
             
             <input type="search" id="search-city" class="form-control" placeholder="Search" />
             
-            <button type="button" class="btn btn-dark">search</button>
+            <button type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
            
           </div>
            
@@ -106,7 +96,7 @@ $(document).ready(function () {
   });
 
   $('#search-city').focusout(function() { 
-    $('#suggesstion-box').hide();
+   // $('#suggesstion-box').hide();
   });
 
   $('#search-city').focus(function() { 

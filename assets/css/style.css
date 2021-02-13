@@ -1,3 +1,7 @@
+body{
+	    min-height: 600px;
+    	background: #8e8d8db3;
+}
 .banner-search-img{
 	background-image: url(../images/banner.png);
 	height: 45vh;
@@ -5,6 +9,25 @@
 .search-wrapper{
 	padding : 10%;
 }
+.forcast-result-container{
+	border-radius: 10px;
+	margin-top: -20px;
+}
+#suggesstion-box{
+	background: #f0f0f0;
+	margin-top:1px;
+	padding:0;
+	width:90%;
+	position: absolute;
+}
+#suggesstion-box li{
+	padding: 10px;
+	list-style:none;
+	border-bottom: #bbb9b9 1px solid;
+}
+
+li:hover{background:#dfdedc;cursor: pointer;}
+
 @media only screen and (max-width: 600px) {
   .banner-search-img{
 		height: 30vh;
