@@ -16,4 +16,5 @@ The following information is displayed after entering the correct city name:
 
 
 The application can also be accessed via cli by using following command in cli
-php Script/forcast.php
+`php Script/forcast.php` ( MohKari: .md files are "MarkDown", you can add cool quotes to stuff )
+

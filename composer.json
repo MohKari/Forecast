@@ -1,0 +1,29 @@
+{
+    // MohKari: You cant have comments in this file, it breaks stuff, but I've added them to explain the properties...
+    // You would need to run "composer install" for this to generate the vendor directory and the
+    // autoload.php file within ( that my autoload.php uses)
+
+    // name of this project
+    "name": "mohkari/discord-bot",
+    "description": "test",
+
+    // any composer libs you need in production ( you can make the app only download these )
+    "require": {
+        "team-reflex/discord-php": "^4.0"
+    },
+
+    // any composer libs you need in development ( this lets you do dd() )
+    "require-dev": {
+        "symfony/var-dumper": "^5.1"
+    },
+
+    // this adds a bunch of namespaces for you to use
+    "autoload": {
+    	"psr-4": {
+      		"Classes\\":"Classes/",
+      		"Script\\":"Script/",
+      		// "Helpers\\":"Helpers/",
+          // "Services\\":"Services/"
+    	}
+  	}
+}

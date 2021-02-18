@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- MohKari: CDN's good stuff. -->
     <!-- ATF -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -30,45 +31,45 @@
       </li>
     </ul>
 
-  </nav>  
+  </nav>
 
     <div class="container-fluid banner-search-img">
-      
+
       <div class="search-wrapper">
-        
-        <div class="col-md-12"> 
-          
+
+        <div class="col-md-12">
+
           <div class="input-group">
-            
+
             <input type="search" id="search-city" class="form-control" placeholder="Search" />
-            
+
             <button type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
-           
+
           </div>
-           
+
           <div id="suggesstion-box" class="d-none" style="background: background: #f0f0f0">
             <ul class='p-3' id='city' ></ul>
           </div>
 
            <?php
-          
+
             if(isset($_SESSION['flash'])){?>
-          
+
               <div class="alert alert-danger mt-5" role="alert">
 
                 <?php echo $_SESSION['flash']; unset($_SESSION['flash']); ?>
-              
+
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
-               </div> 
-          
+               </div>
+
           <?php } ?>
 
         </div>
-        
+
 
       </div>
 
     </div>
 
-   
+
